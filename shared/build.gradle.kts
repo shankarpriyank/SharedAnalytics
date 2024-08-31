@@ -53,6 +53,6 @@ android {
 addGithubPackagesRepository()
 
 kmmbridge {
-    mavenPublishArtifacts()
+    gitHubReleaseArtifacts()
     spm()
 }
