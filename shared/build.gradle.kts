@@ -9,12 +9,6 @@ plugins {
 kotlin {
     androidTarget {
         publishAllLibraryVariants()
-        compilations.all{
-            kotlinOptions{
-                jvmTarget = "1.8"
-
-            }
-        }
     }
     
     listOf(
@@ -45,14 +39,16 @@ android {
         minSdk = 24
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_7
+        targetCompatibility = JavaVersion.VERSION_1_7
     }
 }
 
 addGithubPackagesRepository()
 
 kmmbridge {
-    mavenPublishArtifacts()
-    spm()
+    gitHubReleaseArtifacts()
+    spm(swiftToolVersion = "5.8") {
+        iOS { v("14") }
+    }
 }

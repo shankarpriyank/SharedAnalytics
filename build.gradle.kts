@@ -1,20 +1,8 @@
-plugins {
-
-
-}
-
-val autoVersion = project.property(
-    if (project.hasProperty("AUTO_VERSION")) {
-        "AUTO_VERSION"
-    } else {
-        "LIBRARY_VERSION"
-    }
-) as String
-
 subprojects {
     val GROUP: String by project
+    val LIBRARY_VERSION: String by project
     group = GROUP
-    version = autoVersion
+    version = LIBRARY_VERSION
 }
 
 tasks.register<Delete>("clean") {
