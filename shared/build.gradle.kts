@@ -47,8 +47,5 @@ android {
 addGithubPackagesRepository()
 
 kmmbridge {
-    gitHubReleaseArtifacts()
-    spm(swiftToolVersion = "5.8") {
-        iOS { v("14") }
-    }
+    spm()
 }
