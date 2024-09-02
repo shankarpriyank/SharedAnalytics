@@ -47,5 +47,6 @@ android {
 addGithubPackagesRepository()
 
 kmmbridge {
+    addGithubPackagesRepository()
     spm()
 }
