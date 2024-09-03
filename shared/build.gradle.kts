@@ -39,7 +39,7 @@ android {
         minSdk = 24
     }
 }
-
+addGithubPackagesRepository()
 kmmbridge {
     gitHubReleaseArtifacts()
     spm(swiftToolVersion = "5.8") {
