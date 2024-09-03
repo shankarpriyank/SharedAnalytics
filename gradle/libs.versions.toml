@@ -1,12 +1,12 @@
 [versions]
-agp = "8.6.0-rc01"
+agp = "8.2.2"
 kotlin = "1.9.23"
 compose = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
 android-gradle-plugin = "8.2.2"
-kmmBridge = "0.5.1"
-skie = "0.6.4"
+kmmBridge = "1.0.0"
+skie = "0.8.4"
 
 
 [libraries]

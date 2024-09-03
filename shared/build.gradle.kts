@@ -49,10 +49,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-
 addGithubPackagesRepository()
-
 kmmbridge {
-    mavenPublishArtifacts()
-    spm()
+    gitHubReleaseArtifacts()
+    spm(swiftToolVersion = "5.8") {
+        iOS { v("14") }
+    }
 }
