@@ -9,6 +9,12 @@ plugins {
 kotlin {
     androidTarget {
         publishAllLibraryVariants()
+        compilations.all{
+            kotlinOptions{
+                jvmTarget = "1.8"
+
+            }
+        }
     }
     
     listOf(
@@ -37,6 +43,10 @@ android {
     compileSdk = 34
     defaultConfig {
         minSdk = 24
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_7
+        targetCompatibility = JavaVersion.VERSION_1_7
     }
 }
 addGithubPackagesRepository()
